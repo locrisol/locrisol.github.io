@@ -10,6 +10,7 @@
 <body>
 
     <div class="container">
+      <!-- Carousel Header -->
         <div class="row">
             <div id="carouselHeader" class="col-sm-12 col-md-12 col-lg-12" data-ride="carousel">
                 <div class="carousel-inner">
@@ -27,13 +28,11 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- Base code for Navigation Bar from BootStrap documentation website -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="./index.html">Menu</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -47,41 +46,99 @@
         </nav>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-
-                sdgasdgasgsadgasd
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <!-- Bootstrap Collapse code used -->
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#editorOne"
+                aria-expanded="false" aria-controls="editorOne">
+                Editor number one
+              </button>
+            </p>
+            <div style="min-height: 120px;">
+              <div class="collapse collapse-horizontal" id="editorOne">
+                <div class="card card-body" style="width: 300px;">
+                Editor text number one
+                </div>
+              </div>
             </div>
+          
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#editorTwo"
+                aria-expanded="false" aria-controls="editorTwo">
+                Editor number two
+              </button>
+            </p>
+            <div style="min-height: 120px;">
+              <div class="collapse collapse-horizontal" id="editorTwo">
+                <div class="card card-body">
+                  Editor text number two
+                </div>
+              </div>
+            </div>
+          
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#editorThree"
+                aria-expanded="false" aria-controls="editorThree">
+                Editor number three
+              </button>
+            </p>
+            <div style="min-height: 120px;">
+              <div class="collapse collapse-horizontal" id="editorThree">
+                <div class="card card-body">
+                  Editor text number three
+                </div>
+              </div>
+            </div>
+          
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#editorFour"
+                aria-expanded="false" aria-controls="editorFour">
+                Editor number four
+              </button>
+            </p>
+            <div style="min-height: 120px;">
+              <div class="collapse collapse-horizontal" id="editorFour">
+                <div class="card card-body">
+                  Editor text number four
+                </div>
+            </div>
+          </div>
+        </div>
+
             <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="card mb-3">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+                  <p class="card-text"><small class="text-muted">Leandro Osvaldo Crisol Lo Presti</small></p>
               </div>
-              <div class="card mb-3">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-              <div class="card mb-3">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>   
             </div>
-            <div class="col-lg-2 col-md-12 col-sm-12"></div>
+
+            <div class="card mb-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Leandro Osvaldo Crisol Lo Presti</small></p>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Leandro Osvaldo Crisol Lo Presti</small></p>
+              </div>
+            </div>   
+
+           <div class="col-lg-2 col-md-12 col-sm-12">
                 <!-- Isertion code from Twitter API -->
                 <a class="twitter-timeline" data-height="700" data-dnt="true" href="https://twitter.com/XDevelopers?ref_src=twsrc%5Etfw">Tweets by XDevelopers</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            </div>
+          </div>
+
+          </div>
         </div>
 
     </div>
