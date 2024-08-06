@@ -6,7 +6,10 @@ nav{
     margin-bottom: 50px;
 }
 
-div.card.card-body{
-    width: 80%;
+div.editors{
+    border-color: black;
+    border-style: solid;
+    border-radius: 2px;
+    padding: 2px;
 }
 
