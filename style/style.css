@@ -1,5 +1,9 @@
-body{
+body {
     background-color: antiquewhite;
+}
+
+div.row {
+    border-radius: 2px;
 }
 
 nav{
@@ -7,9 +11,116 @@ nav{
 }
 
 div.editors{
+    border-radius: 2px;
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h5.editorsName{
+    background-color: rgb(203, 236, 236);
+    border-radius: 2px;
+    padding: 3px;
+    text-align: center;
+    color: #18d4d4;
+    -webkit-text-stroke: 1px #088a8a;
+}
+
+p.editorsDescription, div#editorsList, div#jackpotGame, h4#articles-section-title{
+    background-color: #f4fdfd;
+    border-radius: 10px;
+    
+}
+
+p.editorsDescription{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding-top: 10px;
+}
+
+div#jackpotGame{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h4{
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h4#editorsSectionTitle, h4#minigameSectionTitle{
+    border-bottom-color: rgba(110, 110, 110, 0.171);
+    border-bottom-style: solid;
+}
+
+div#gameStart, div#gamePannel{
+    background-color: rgb(175, 216, 216);
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+div#footer {
+    background-color: rgb(159, 252, 190);
+    border-radius: 2px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
+
+p#startGameText, p#gamePannelTitle, p#gamePannelDescription, div#winnerText {
+   font-size: 125%;
+}
+
+button#startGameButton, button#rollNumbers, button#restartGameBox{
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+div#gameNumberOne, div#gameNumberTwo, div#gameNumberThree{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.8em;
+    background-image: url("../images/jackpot.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(8, 39, 219);
+}
+
+div#footer{
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+div.socialMedialShare{
+    vertical-align: middle;
     border-color: black;
     border-style: solid;
     border-radius: 2px;
-    padding: 2px;
 }
 
+div.article{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(255, 255, 255, 0.582);
+}
+
+div.articleSubTitle, div.articleImage, div.articleContent{
+    margin-top: 10px;
+}
