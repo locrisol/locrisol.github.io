@@ -102,8 +102,7 @@ function restartGame(){
 
     document.getElementById("gamePannelTitle").style.display = "block";
     document.getElementById("gamePannelTitle").style.visibility = "visible";
-    // hides game panel description if winner
-    
+    // hides game panel description if winner   
 
 }
 
@@ -138,4 +137,147 @@ function checkCommentLength(){
     if(nameLength >= 5 && commentLength >= 10){
         document.getElementById("newMessageButton").disabled = false;
     }
+}
+
+function toogleVideoLengthSelector(){
+    var isChecked = document.getElementById("videoServiceNeeded").checked;
+    var selectList = document.getElementById("lengthOfVideo");
+    if(isChecked){
+        selectList.disabled = false;
+    }
+    else{
+        selectList.disabled = true;
+    }
+}
+
+function toogleLanguagesSelector(){
+    var isChecked = document.getElementById("translationServiceNeeded").checked;
+    var selectList = document.getElementById("languagesToTranslate");
+    if(isChecked){
+        selectList.disabled = false;
+    }
+    else{
+        selectList.disabled = true;
+    }    
+}
+
+function toogleCalculatorButton(){
+    // Stores on each value the reference to the lists availables
+    var articles = document.getElementById("numberOfArticles");;
+    var articlesLength = document.getElementById("lengthOfArticles");
+    var videosLength = document.getElementById("lengthOfVideo");
+    var languages = document.getElementById("languagesToTranslate");
+    // Stores on each variable de value of the list that is selected
+    var articlesSelectedValue = articles.options[articles.selectedIndex].value;
+    var articlesLengthSelectedValue = articlesLength.options[articlesLength.selectedIndex].value;
+    var videosLengthSelectedValue = videosLength.options[videosLength.selectedIndex].value;
+    var languagesSelectedValue = languages.options[languages.selectedIndex].value;
+    // Checks if the toogle buttons for Video and Translation are checked or not
+    var needsVideoChecked = document.getElementById("videoServiceNeeded").checked;
+    var needsTranslationChecked = document.getElementById("translationServiceNeeded").checked;
+    // Stores the reference to the button that we will enable and disable
+    var calculateButton = document.getElementById("calculatorButton");
+
+    // Checks if any of the 2 mandatory options of the form is on default value
+    if(articlesSelectedValue == "default" || articlesLengthSelectedValue == "default"){
+        calculateButton.disabled = true;
+    } // Checks if any toogle button was checked without choosing an option from each of the lists
+    else if((needsVideoChecked == true && videosLengthSelectedValue == "default") || (needsTranslationChecked == true && languagesSelectedValue == "default")){
+        calculateButton.disabled = true;
+    } 
+    else{
+        calculateButton.disabled = false;
+    } 
+}
+
+function displayEstimation(){
+        // Stores on each value the reference to the lists availables
+        var articles = document.getElementById("numberOfArticles");;
+        var articlesLength = document.getElementById("lengthOfArticles");
+        var videosLength = document.getElementById("lengthOfVideo");
+        var languages = document.getElementById("languagesToTranslate");
+        var pictures = document.getElementById("pictureServiceNeeded");
+        // Stores on each variable the value of the list that is selected
+        var articlesSelectedValue = articles.options[articles.selectedIndex].value;
+        var articlesLengthSelectedValue = articlesLength.options[articlesLength.selectedIndex].value;
+        var videosLengthSelectedValue = videosLength.options[videosLength.selectedIndex].value;
+        var languagesSelectedValue = languages.options[languages.selectedIndex].value;
+
+        var totalCost, numberDiscount, lengthCharge, picturesCharge, videoCharge, translationCharge;
+        var basePriceArticle = 5;
+        var needsPicturesChecked = pictures.checked;
+        // Calculates priced based in weekly articles
+        numberDiscount = 1; // No discount by default
+        if(articlesSelectedValue >= 30){
+            basePriceArticle *= 0.85;
+            numberDiscount = basePriceArticle;
+        }        
+        else if(articlesSelectedValue >= 20){
+            basePriceArticle *= 0.90;
+            numberDiscount = basePriceArticle;
+        }
+        else if(articlesSelectedValue >= 10){
+            basePriceArticle *= 0.95;
+            numberDiscount = basePriceArticle;
+        }        
+
+        // Calculates if there is any extra to be charged based on articles length
+        lengthCharge = 0 // No extra charge by default
+        if(articlesLengthSelectedValue == 1000){
+            lengthCharge = 0.5;
+        }
+        else if(articlesLengthSelectedValue == 2000){
+            lengthCharge = 1.0;
+        }
+        else if(articlesLengthSelectedValue == 3000){
+            lengthCharge = 1.5;
+        }
+        else if(articlesLengthSelectedValue == 3001){
+            lengthCharge = 2.0;
+        }       
+
+        // Add charge if pictures needed
+        picturesCharge = 0; // No charge by default
+        if (needsPicturesChecked){
+            picturesCharge = 5;
+        }
+
+        // Add charge if video is needed
+        videoCharge = 0; // No charge by default
+        if (videosLengthSelectedValue == 500){
+            videoCharge = 5;
+        }
+        else if (videosLengthSelectedValue == 1000){
+            videoCharge = 10;
+        }
+        if (videosLengthSelectedValue == 2000){
+            videoCharge = 15;
+        }
+        
+        // Add charge if translation needed
+        translationCharge = 0; // No charge by default
+        if (languagesSelectedValue == 1){
+            translationCharge = 10;
+        }
+        else if (languagesSelectedValue == 2){
+            translationCharge = 20;
+        }
+        if (languagesSelectedValue == 3){
+            translationCharge = 30;
+        }
+
+        totalCost = articlesSelectedValue * (basePriceArticle + lengthCharge + picturesCharge + videoCharge + translationCharge);
+
+        if(numberDiscount == 1){
+            document.getElementById("individualPriceArticle").innerHTML = "Price of each article:<br> €"+ basePriceArticle;
+        }
+        else{
+            document.getElementById("individualPriceArticle").innerHTML = ("Price of each article:<br> <del>€5.00</del> | €"+ numberDiscount);
+        }
+        document.getElementById("totalBasePriceArticles").innerHTML = "Total base price for articles:<br> €"+ basePriceArticle * articlesSelectedValue;
+        document.getElementById("extraChargeLength").innerHTML = ("Length charges total:<br> €" + lengthCharge * articlesSelectedValue);
+        document.getElementById("extraChargePictures").innerHTML = ("Pictures charges total:<br> €" + picturesCharge*articlesSelectedValue);
+        document.getElementById("extraChargeVideos").innerHTML = ("Video charges total:<br> €" + videoCharge*articlesSelectedValue);
+        document.getElementById("extraChargeTranslation").innerHTML = (" Translations charges total:<br> €" + translationCharge*articlesSelectedValue);
+        document.getElementById("totalCost").innerHTML = ("Total weekly cost of service:<br> €" + totalCost);
 }

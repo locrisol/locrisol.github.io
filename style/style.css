@@ -30,11 +30,17 @@ h5.editorsName{
     -webkit-text-stroke: 1px #088a8a;
 }
 
-p.editorsDescription, div#editorsList, div#jackpotGame, h4#articles-section-title{
+p.editorsDescription, div#editorsList, div#jackpotGame, h4#articles-section-title,
+div#calculatorFormContainer{
     background-color: #f4fdfd;
     border-radius: 10px;
     
 }
+
+div#calculatorFormContainer{
+    padding: 20px;
+}
+
 
 p.editorsDescription{
     font-family: "Roboto Condensed", sans-serif;
@@ -135,7 +141,7 @@ div#articleContainer, div#editorsList, div#jackpotGame {
     margin-bottom: 30px;
 }
 
-div.articleTitle, div.articleSubTitle, form#commentsForm{
+div.articleTitle, div.articleSubTitle, form#commentsForm, div#priceBreakdown{
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -157,4 +163,13 @@ div.articleContainerRows{
         border-style: solid;
     }
 
+}
+
+div#priceBreakdown{
+    padding: 10px;
+}
+
+p#totalCost{
+    font-size: 1.8em;
+    text-align: center;
 }
