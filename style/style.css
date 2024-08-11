@@ -53,7 +53,7 @@ div#calculatorFormContainer, div#contactFormContainer{
 }
 
 /* Adds spacing at the end of the sections of the grid*/
-div#articleContainer, div#editorsList, div#jackpotGame {
+div#articleContainer, div#editorsList, div#jackpotGame, div#calculatorFormContainer {
     margin-bottom: 30px;
 }
 
