@@ -3,35 +3,55 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Web development Final Project (Leandro Crisol)</title>
+    <meta name="viewport, twitter:widgets:autoload"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, off">
+    <!-- For articles view, page title will be obtained from the article title itself -->
+    <title id="autoWebTitle"></title>
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Local CSS link -->
     <link rel="stylesheet" href="../../style/style.css">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Radio+Canada+Big:ital,wght@0,565;1,565&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    <!-- Container for all the website -->
     <div class="container">
         <!-- Carousel Header -->
         <div class="row">
             <div id="carouselHeader" class="col-sm-12 col-md-12 col-lg-12" data-ride="carousel">
                 <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../../images/header1.jpg"
+                            alt="Media employees in an interview for TV.">
+                    </div>
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="../../images/header1.jpg" alt="">
+                        <img class="d-block w-100" src="../../images/articles.jpg" alt="Examples of articles on screen">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../../images/articles.jpg" alt="">
+                        <img class="d-block w-100" src="../../images/pricing.jpg" alt="Picture of an old book">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../../images/pricing.jpg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../../images/contact.jpg" alt="">
+                        <img class="d-block w-100" src="../../images/contact.jpg" alt="Old landline phone">
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Base code for Navigation Bar from BootStrap documentation website -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="../../index.html">Menu</a>
@@ -42,21 +62,21 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="../../index.html">Home</a>
-                    <a class="nav-item nav-link active" href="../../html/articles.html">Articles examples <span
-                        class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="../../html/pricing.html">Pricing</a>
-                    <a class="nav-item nav-link" href="../../html/contact.html">Contact</a>
+                    <a class="nav-item nav-link active" href="../articles-examples.html">Articles examples <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="../pricing.html">Pricing</a>
+                    <a class="nav-item nav-link" href="../contact.html">Contact</a>
                 </div>
             </div>
         </nav>
 
         <!-- END OF HEADER -->
 
+        <!-- List of the editors -->
         <div class="row">
-            <div id="editorsList" class="col-lg-3 col-md-6 col-sm-12">
-                <h4>Our editors</h4>
+            <div id="editorsList" class="col-lg-3 col-md-6 col-sm-12 col-12 order-2 order-sm-2 order-md-2 order-lg-1">
+                <h4 id="editorsSectionTitle">Our editors</h4>
                 <div class="editors">
-
                     <h5 class="editorsName">
                         John Murphy
                     </h5>
@@ -87,7 +107,8 @@
                         alt="Profile picture of Conor Shean">
                     <p class="editorsDescription">
                         10 years in the economics coverage provided him with enough understanding, a perfect candidate
-                        to include in your finance website or media.
+                        to include in
+                        your finance website or media.
                     </p>
                 </div>
                 <div class="editors">
@@ -98,7 +119,8 @@
                         alt="Profile picture of Helena McGrane">
                     <p class="editorsDescription">
                         Social media influencer with wide experience on writing articles for the last 5 years,
-                        specialized on social media, Internet of Things, and smart-devices.
+                        specialized on social
+                        media, Internet of Things, and smart-devices.
                     </p>
                 </div>
                 <div class="editors">
@@ -109,7 +131,8 @@
                         alt="Profile picture of Daniel Patrick">
                     <p class="editorsDescription">
                         Cyber-security expert working in the past with top companies that provided the maximum
-                        protection services and software to governments and institutions.
+                        protection services
+                        and software to governments and institutions.
                     </p>
                 </div>
                 <div class="editors">
@@ -120,43 +143,167 @@
                         alt="Profile picture of Rebecca Fitzmons">
                     <p class="editorsDescription">
                         Recently graduated editor with a six years background as freelance editor on Android, Apple, and
-                        Microsoft products. Advanced knowledge of video edition.
+                        Microsoft
+                        products. Advanced knowledge of video edition.
                     </p>
                 </div>
-
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <h1>A Game-Changer in the Mobile World</h1>
-                <p>When Apple launched the first iPhone in 2007, the world of mobile technology was forever changed. 
-                    John Murphy, with his extensive background in tech journalism, was one of the first to delve deeply 
-                    into what made the iPhone revolutionary. His article, published shortly after the device's release, 
-                    highlighted not only the iPhone's innovative design but also its potential to disrupt the existing 
-                    mobile phone market.</p>
-                <p>Murphy's review went beyond the technical specifications, focusing on how the iPhone's multi-touch 
-                    interface, integrated ecosystem, and app-centric design were poised to redefine user interaction with 
-                    technology. He pointed out that the iPhone was not just another smartphone but a handheld computer 
-                    that could fit in your pocket—a concept that seemed almost futuristic at the time.</p>
-                <p>In his analysis, Murphy predicted that the iPhone would catalyze a shift in how we think about mobile 
-                    devices, steering them away from simple communication tools to becoming central hubs for our digital 
-                    lives. His foresight was spot on, as the iPhone indeed paved the way for the modern smartphone era, 
-                    influencing the design and functionality of countless devices that followed.</p>
-                <p>Murphy also discussed the broader implications of the iPhone's release, including its potential to 
-                    influence the development of mobile internet, software applications, and even social media. His article 
-                    was widely regarded as one of the most comprehensive early reviews of the iPhone, offering readers a 
-                    deep understanding of why this device was more than just a phone.</p>
+            <!-- ARTICLE CONTENT START-->
+            <div id="articleContainer"
+                class="col-lg-6 col-md-6 col-sm-12 col-12 order-1 order-sm-1 order-md-1 order-lg-2">
+                <div class="article">
+                    <div class="articleTitle">
+                        <h2 id="titleOfTheArticle">Evolution of Smartphones: From Early Innovations to Today’s
+                            Powerhouses</h2>
+                    </div>
+                    <hr>
+                    <div class="articleSubTitle">
+                        <h6>John Murphy traces the evolution of smartphones, highlighting key technological advancements
+                            and their impact on how we communicate and interact with the world.</h6>
+                    </div>
+                    <hr>
+                    <div class="articleImage"><img src="../../images/articles/john-murphy-1.jpg" class="img-fluid"
+                            alt="Old phone vs new smartphone"></div>
+                    <div class="articleContent">
+                        <p>The smartphone has arguably been the most significant technological innovation of the 21st
+                            century, revolutionizing the way we communicate, work, and live. In an insightful article,
+                            tech expert John Murphy delved into the evolution of smartphones, charting their development
+                            from early prototypes to the powerful, multifunctional devices we use today.</p>
+                        <p>Murphy began by recounting the origins of the smartphone, tracing its roots back to devices
+                            like IBM’s Simon Personal Communicator and the first BlackBerry models. He described how
+                            these early devices laid the groundwork for the smartphones we know today, introducing
+                            features like email access, touchscreens, and mobile internet.</p>
+                        <p>As he explored the rapid advancement of smartphone technology, Murphy highlighted several key
+                            milestones, including the launch of the first iPhone in 2007. He discussed how Apple’s
+                            innovative design and user interface set a new standard for the industry, leading to a wave
+                            of innovation that transformed the smartphone market. Murphy also noted the impact of
+                            Android, which provided a flexible and open-source alternative that fueled the proliferation
+                            of smartphones across the globe.</p>
+                        <p>Murphy’s article also examined the broader implications of smartphone technology. He
+                            discussed how smartphones have become indispensable tools for communication, entertainment,
+                            and productivity, integrating features like social media, GPS, and mobile payments. Murphy
+                            pointed out that the rise of smartphones has also driven the development of new industries,
+                            from app development to mobile advertising.</p>
+                        <p>In addition to celebrating the successes of smartphone technology, Murphy acknowledged the
+                            challenges that have come with it. He touched on issues such as smartphone addiction,
+                            privacy concerns, and the environmental impact of manufacturing and disposing of these
+                            devices. Murphy argued that as smartphones continue to evolve, it is crucial to address
+                            these challenges to ensure that the technology remains a positive force in society.</p>
+                        <p>Murphy concluded his article by looking to the future, predicting that smartphones will
+                            continue to evolve, incorporating emerging technologies like foldable displays, 5G
+                            connectivity, and advanced AI. He emphasized that while the smartphone has already
+                            transformed the world in countless ways, its full potential has yet to be realized.</p>
+                    </div>
+                    <div class="socialMediaShare">
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                            data-show-count="false" data-size="large">Share in X</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
 
+                    <hr>
+
+                    <!-- AUTHOR INFO -->
+                    <h6>About the author</h6>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../../images/editors/john-murphy.jpg" class="img-fluid rounded-start"
+                                    alt="Picture of John Murphy">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">John Murphy</h5>
+                                    <p class="card-text">With his 25 years of experience working with the last tech
+                                        devices, he has wide experience writing all kind of technological information
+                                        and articles. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Comments section using Bootstrap forms -->
+                    <form id="commentsForm">
+                        <!-- User name input -->
+                        <div class="form-group">
+                            <label for="userFullName">Your full name</label>
+                            <input type="email" class="form-control" id="userFullName"
+                                placeholder="Type your full name here" onkeyup="checkCommentLength()"
+                                aria-describedby="nameHelp">
+                            <small id="nameHelp" class="form-text text-muted">
+                                Your name must be at least 5 characters long.
+                            </small>
+                        </div>
+                        <!-- User comment input -->
+                        <div class="form-group">
+                            <label for="userComment">Your comment</label>
+                            <textarea class="form-control" id="userComment" rows="3"
+                                placeholder="Start typing your comment here" onkeyup="checkCommentLength()"
+                                aria-describedby="commentHelp"></textarea>
+                            <small id="commentHelp" class="form-text text-muted">
+                                Your comment must be at least 10 characters long.
+                            </small>
+                        </div>
+                        <!-- Button to send the comment -->
+                        <input id="newMessageButton" type="button" onclick="sendNewMessage()" value="Submit">
+                        <hr>
+                    </form>
+                    <h5>COMMENTS TO THIS ARTICLE:</h5>
+                    <p id="noComments">No comments at this moment.</p>
+                    <p id="listOfComments"></p>
+                </div>
             </div>
+            <!-- ARTICLE CONTENT END-->
 
-            <div class="col-lg-2 col-md-12 col-sm-12">
+            <!-- Slots machine code -->
+            <div id="jackpotGame" class="col-lg-3 col-md-12 col-sm-12 col-12 order-3 order-sm-3 order-md-3 order-lg-3">
+                <h4 id="minigameSectionTitle">Jackpot Machine</h4>
+                <!-- Main section of the game-->
+                <div id="gameStart">
+                    <p id="startGameText">Do you want to start the game?</p>
+                    <button id="startGameButton" onclick="startGame()">Start Game</button>
+                </div>
 
+                <!-- Playing section of the game -->
+                <div id="gamePannel">
+                    <div>
+                        <p id="gamePannelTitle">Press the button to try your luck!</p>
+                        <p id="gamePannelDescription">Numbers will roll from 1 to 9, get three times the same
+                            number to win a prize, or get three times the 7 to win the
+                            jackpot.</p>
+                    </div>
+                    <button id="rollNumbers" onclick="rollNumbers()">Roll numbers</button>
+
+                    <!-- Winner section of the game -->
+                    <div id="winnerText"></div>
+                    <div id="gameScreen">
+                        <div id="gameNumberOne"></div>
+                        <div id="gameNumberTwo"></div>
+                        <div id="gameNumberThree"></div>
+                    </div>
+                    <div id="restartGameBox">
+                        <button onclick="restartGame()">Restart Game</button>
+                    </div>
+                </div>
             </div>
-
+        </div>
+        <br>
+        <!-- Footer of the website -->
+        <div class="row">
+            <div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-12 order-4">
+                <p>All pictures on this website are from <a href="https://www.pexels.com/"
+                        target="_blank">Pexels.com</a> and
+                    they are free to be used.</p>
+                <p>ChatGPT used to generate content of the articles, no AI used on any other part.</p>
+                <p><a href="#carouselHeader" rel="noopener noreferrer">Go to the start of the page</a></p>
+            </div>
         </div>
     </div>
-
-    </div>
-
+    <!-- Import local JavaScript file-->
+    <script src="../../js/script.js"></script>
+    <!-- Bootstrap imports -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
