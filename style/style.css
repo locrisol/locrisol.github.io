@@ -48,6 +48,7 @@ div#jackpotGame{
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+    padding-bottom: 40px;
 }
 
 h4{
@@ -111,13 +112,6 @@ div#footer{
     padding-top: 10px;
 }
 
-div.socialMedialShare{
-    vertical-align: middle;
-    border-color: black;
-    border-style: solid;
-    border-radius: 2px;
-}
-
 div.article{
     margin-left: 5px;
     margin-right: 5px;
@@ -146,4 +140,21 @@ div.articleTitle, div.articleSubTitle, form#commentsForm{
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+}
+
+div.articleContainerRows{
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px){
+    div#jackpotGame{
+        border-color: rgb(156, 156, 156);
+        border-style: solid;
+    }
+
+    div#editorsList{
+        border-color: rgb(156, 156, 156);
+        border-style: solid;
+    }
+
 }
