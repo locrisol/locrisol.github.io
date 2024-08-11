@@ -224,3 +224,8 @@ p#totalCost {
 p#invalidEmailMessage {
     color: red;
 }
+
+/* Remove underline for links */
+a:link{
+    text-decoration: none;
+}
