@@ -9,12 +9,12 @@ div.row {
 }
 
 /* Adds margin on bottom of the navigation bar */
-nav{
+nav {
     margin-bottom: 50px;
 }
 
 /* Styling for each of the editors information */
-div.editors{
+div.editors {
     border-radius: 2px;
     padding: 2px;
     margin-top: 5px;
@@ -22,12 +22,12 @@ div.editors{
 }
 
 /* Adds a margin for the container for the editors list */
-div#editorsList{
+div#editorsList {
     margin-bottom: 20px;
 }
 
 /* Specific styling for the name of each editor*/
-h5.editorsName{
+h5.editorsName {
     background-color: rgb(203, 236, 236);
     border-radius: 2px;
     padding: 3px;
@@ -37,7 +37,7 @@ h5.editorsName{
 }
 
 /* Specific styling for the description of the editors on the main list*/
-p.editorsDescription{
+p.editorsDescription {
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -46,31 +46,41 @@ p.editorsDescription{
 }
 
 /* Background color for all the sections of the Bootstrap grid */
-p.editorsDescription, div#editorsList, div#jackpotGame, h4#articles-section-title,
-div#calculatorFormContainer, div#contactFormContainer{
+p.editorsDescription,
+div#editorsList,
+div#jackpotGame,
+h4#articles-section-title,
+div#calculatorFormContainer,
+div#contactFormContainer {
     background-color: #f4fdfd;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 /* Adds spacing at the end of the sections of the grid*/
-div#articleContainer, div#editorsList, div#jackpotGame, div#calculatorFormContainer {
+div#articleContainer,
+div#editorsList,
+div#jackpotGame,
+div#calculatorFormContainer,
+div#contactFormContainer {
     margin-bottom: 30px;
 }
 
 /* Padding for the text in the forms of the website */
-div#calculatorFormContainer, div#contactFormContainer{
+div#calculatorFormContainer,
+div#contactFormContainer {
     padding: 20px;
 }
 
 /* Specific styling for the Jackpot game */
-div#jackpotGame{
+div#jackpotGame {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
     padding-bottom: 40px;
 }
+
 /* Specific styling for the headers of each of the sections of the grid */
-h4{
+h4 {
     padding: 15px;
     text-align: center;
     font-size: 1.5em;
@@ -81,13 +91,15 @@ h4{
 }
 
 /* Adds a border on the bottom of the lateral sections title to separate content from title */
-h4#editorsSectionTitle, h4#minigameSectionTitle{
+h4#editorsSectionTitle,
+h4#minigameSectionTitle {
     border-bottom-color: rgba(110, 110, 110, 0.171);
     border-bottom-style: solid;
 }
 
 /* Styling for the inner part of the Jackpot game, the actual screen */
-div#gameStart, div#gamePannel{
+div#gameStart,
+div#gamePannel {
     background-color: rgb(194, 223, 223);
     text-align: center;
     border-radius: 5px;
@@ -95,18 +107,25 @@ div#gameStart, div#gamePannel{
 }
 
 /* Incresases sie of the text on the Jackpot Game*/
-p#startGameText, p#gamePannelTitle, p#gamePannelDescription, div#winnerText {
+p#startGameText,
+p#gamePannelTitle,
+p#gamePannelDescription,
+div#winnerText {
     font-size: 125%;
 }
 
 /* Styling for the buttons of the Jackpot Game */
-button#startGameButton, button#rollNumbers, button#restartGameBox{
+button#startGameButton,
+button#rollNumbers,
+button#restartGameBox {
     font-size: 20px;
     border-radius: 3px;
 }
 
 /* Styling for the slots where each of the numbers rolled will appear */
-div#gameNumberOne, div#gameNumberTwo, div#gameNumberThree{
+div#gameNumberOne,
+div#gameNumberTwo,
+div#gameNumberThree {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 30px;
@@ -135,7 +154,7 @@ div#footer {
 }
 
 /* Positioning and background for each of the articles when visited the full version */
-div.article{
+div.article {
     margin-left: 5px;
     margin-right: 5px;
     padding: 10px 20px 10px 20px;
@@ -143,22 +162,29 @@ div.article{
 }
 
 /* Adds margin to separate each of the sections of the article */
-div.articleTitle, div.articleSubTitle, div.articleImage, div.articleContent{
+div.articleTitle,
+div.articleSubTitle,
+div.articleImage,
+div.articleContent {
     margin-top: 20px;
 }
 
 /* Center title and subtitle of each article */
-div.articleTitle, div.articleSubTitle{
+div.articleTitle,
+div.articleSubTitle {
     text-align: center;
 }
 
 /* Modifies the title of the articles to make them always uppercase */
-div.articleTitle{
+div.articleTitle {
     text-transform: uppercase;
 }
 
 /* Shared font style */
-div.articleTitle, div.articleSubTitle, form#commentsForm, div#priceBreakdown{
+div.articleTitle,
+div.articleSubTitle,
+form#commentsForm,
+div#priceBreakdown {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -166,34 +192,35 @@ div.articleTitle, div.articleSubTitle, form#commentsForm, div#priceBreakdown{
 }
 
 /* Separates the cards of the articles lists */
-div.articleContainerRows{
+div.articleContainerRows {
     margin-bottom: 10px;
 }
 
 /* Adds a grey border between the game and the editors list when displayed in a medium size screen */
-@media only screen and (min-width: 768px) and (max-width: 990px){
-    div#jackpotGame{
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    div#jackpotGame {
         border-color: rgb(156, 156, 156);
         border-style: solid;
     }
-    div#editorsList{
+
+    div#editorsList {
         border-color: rgb(156, 156, 156);
         border-style: solid;
     }
 }
 
 /* Adds space at the end of the price breakdown in the pricing section */
-div#priceBreakdown{
+div#priceBreakdown {
     padding: 10px;
 }
 
 /* Specific styling when displaying total estimated cost of services */
-p#totalCost{
+p#totalCost {
     font-size: 1.8em;
     text-align: center;
 }
 
 /* If user email is invalid, will be displayed in red */
-p#invalidEmailMessage{
+p#invalidEmailMessage {
     color: red;
 }
