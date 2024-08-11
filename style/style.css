@@ -31,13 +31,13 @@ h5.editorsName{
 }
 
 p.editorsDescription, div#editorsList, div#jackpotGame, h4#articles-section-title,
-div#calculatorFormContainer{
+div#calculatorFormContainer, div#contactFormContainer{
     background-color: #f4fdfd;
     border-radius: 10px;
     
 }
 
-div#calculatorFormContainer{
+div#calculatorFormContainer, div#contactFormContainer{
     padding: 20px;
 }
 
@@ -157,12 +157,10 @@ div.articleContainerRows{
         border-color: rgb(156, 156, 156);
         border-style: solid;
     }
-
     div#editorsList{
         border-color: rgb(156, 156, 156);
         border-style: solid;
     }
-
 }
 
 div#priceBreakdown{
@@ -172,4 +170,8 @@ div#priceBreakdown{
 p#totalCost{
     font-size: 1.8em;
     text-align: center;
+}
+
+p#invalidEmailMessage{
+    color: red;
 }
