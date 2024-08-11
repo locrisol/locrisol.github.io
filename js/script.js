@@ -5,6 +5,18 @@ document.getElementById("gamePannel").style.visibility = "hidden";
 document.getElementById("gameScreen").style.display = "none";
 document.getElementById("gameScreen").style.visibility = "hidden";
 
+// disables the button to send comments to the articles by default
+document.getElementById("newMessageButton").disabled = true;
+// display "no comments" in the comments section by default
+document.getElementById("noComments").style.display = "block";
+document.getElementById("noComments").style.visibility = "visible";
+document.getElementById("listOfComments").style.display = "none";
+document.getElementById("listOfComments").style.visibility = "hidden";
+
+// When visiting an article, the article title will be the page title
+var title = document.getElementById("titleOfTheArticle").innerHTML;
+document.getElementById("autoWebTitle").innerHTML = title;
+
 function startGame(){
     document.getElementById("gameStart").style.display = "none";
     document.getElementById("gameStart").style.visibility = "hidden";
@@ -95,3 +107,35 @@ function restartGame(){
 
 }
 
+function sendNewMessage(){
+    var comment = "";  
+    var name = document.getElementById("userFullName").value;
+    var comment = document.getElementById("userComment").value;
+     
+    //display the div that will contain the comments
+    document.getElementById("noComments").style.display = "none";
+    document.getElementById("noComments").style.visibility = "hidden";
+    document.getElementById("listOfComments").style.display = "block";
+    document.getElementById("listOfComments").style.visibility = "visible";
+     
+    // adds a new card/box with each new comment that has been sent
+    document.getElementById("listOfComments").innerHTML +=
+    '<div class="card">'+
+        '<div class="card-header">'
+            +name+
+        '</div>'+
+        '<div class="card-body">'+
+            '<blockquote class="blockquote mb-0">'+
+            '<p>'+comment+'</p>'+
+            '</blockquote>'+
+        '</div>'+
+    '</div><br>';
+}
+
+function checkCommentLength(){
+    nameLength = document.getElementById("userFullName").value.length;
+    commentLength = document.getElementById("userComment").value.length;
+    if(nameLength >= 5 && commentLength >= 10){
+        document.getElementById("newMessageButton").disabled = false;
+    }
+}
