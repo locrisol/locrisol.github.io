@@ -133,6 +133,7 @@ function sendNewMessage(){
 
 /* Checks if the Name is at least 5 characters long and the comment at least 10 characters long, if not disables the button */
 function checkCommentLength(){
+    document.getElementById("newMessageButton").disabled = true;
     nameLength = document.getElementById("userFullName").value.length;
     commentLength = document.getElementById("userComment").value.length;
     if(nameLength >= 5 && commentLength >= 10){
