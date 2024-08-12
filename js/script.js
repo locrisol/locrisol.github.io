@@ -167,7 +167,7 @@ function toogleLanguagesSelector(){
 
 function toogleCalculatorButton(){
     // Stores on each value the reference to the lists availables
-    var articles = document.getElementById("numberOfArticles");;
+    var articles = document.getElementById("numberOfArticles");
     var articlesLength = document.getElementById("lengthOfArticles");
     var videosLength = document.getElementById("lengthOfVideo");
     var languages = document.getElementById("languagesToTranslate");
@@ -196,7 +196,7 @@ function toogleCalculatorButton(){
 
 function displayEstimation(){
         // Stores on each value the reference to the lists availables
-        var articles = document.getElementById("numberOfArticles");;
+        var articles = document.getElementById("numberOfArticles");
         var articlesLength = document.getElementById("lengthOfArticles");
         var videosLength = document.getElementById("lengthOfVideo");
         var languages = document.getElementById("languagesToTranslate");
